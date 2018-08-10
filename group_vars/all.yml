@@ -1,6 +1,6 @@
 security: testaws1
-access: AKIAJXYAYTWGSQKJVXDA
-secret: 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
+access: *****************
+secret: *****************
 region: us-east-1
 type: t2.micro
 ami: ami-6871a115
