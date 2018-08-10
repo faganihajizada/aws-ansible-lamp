@@ -1,0 +1,10 @@
+security: testaws1
+access: AKIAJXYAYTWGSQKJVXDA
+secret: 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
+region: us-east-1
+type: t2.micro
+ami: ami-6871a115
+pemkey: awsansible1 
+subnet: subnet-1e99de54
+instance: 1
+tagname: web

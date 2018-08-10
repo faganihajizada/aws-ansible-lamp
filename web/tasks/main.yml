@@ -1,0 +1,29 @@
+---
+- name: apache server yuklenir
+  yum:
+    name: httpd
+    state: present
+
+- name: Enable AllowOverride All in httpdconf
+  replace:
+    path: /etc/httpd/conf/httpd.conf
+    regexp: 'AllowOverride None'
+    replace: 'AllowOverride All'
+  
+- name: apache servisi restartb olunur
+  service:
+    name: httpd
+    state: restarted
+    enabled: yes
+
+- name: Install deveopment tool
+  yum:
+    name: "@Development Tools"
+    state: present
+    
+- name: phpinfo fayli yaradilir
+  copy:
+    content: '<?php phpinfo(); ?>'
+    dest: /var/www/html/index.php
+    mode: 0644
+
